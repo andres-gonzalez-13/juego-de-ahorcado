@@ -1,0 +1,10 @@
+pip3 install flask flask-mysqldb
+pip3 isntall flask 
+
+--crear base de datos--
+
+https://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-workbench
+
+--ejecutar--
+
+python3 app.py

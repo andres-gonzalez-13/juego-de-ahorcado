@@ -1,0 +1,14 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<p>_____________________</p>
+<form action="/juego" method="post">
+    <input type="text" name="char" placeholder="letra">
+    <button type="submit">
+        Intentar llenar letra
+    </button>
+</form>
