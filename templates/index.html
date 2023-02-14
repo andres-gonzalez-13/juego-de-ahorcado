@@ -5,10 +5,17 @@
 {% endfor %}
 {% endif %}
 {% endwith %}
+<img src="{{url_for('static', filename='ahorcado10.png')}}"/>
 <p>_____________________</p>
 <form action="/juego" method="post">
     <input type="text" name="char" placeholder="letra">
     <button type="submit">
         Intentar llenar letra
+    </button>
+</form>
+
+<form action="/palabra" method="post">
+    <button type="submit">
+        Nueva palabra
     </button>
 </form>
