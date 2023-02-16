@@ -35,9 +35,9 @@ def juego():
         # vari globales
         global fails, palabraAdiv
         char = request.form['char']
+        char = char.upper()
         #print(char)
         flash(str(len(palabraAdiv)) + ' Letras')
-        flash(palabraAdiv)
         
         if len(char) != 1:
             flash('una letra por intento por favor')
@@ -50,17 +50,21 @@ def juego():
                         temp = list(palabraAdiv) 
                         temp[i] = c
                         palabraAdiv = "".join(temp)
-                flash(palabraAdiv)        
             else:
                 if fails == 10:
                     flash('FIN :(')
+                    flash('Respuesta: ' + palabraCons)
                 else:
                     fails = fails+1
                     flash('no es correcto')
+                    if fails == 10:
+                        flash('FIN :(')
+                        flash('Respuesta: ' + palabraCons)
         
         if '-' not in palabraAdiv:
             flash('ganaste :)')
 
+        flash(palabraAdiv)
         return redirect(url_for('index'))
 
 @app.route('/palabra', methods=['POST'])
