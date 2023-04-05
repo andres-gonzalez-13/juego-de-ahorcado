@@ -1,5 +1,7 @@
+-- librerias
+
 pip3 install flask flask-mysqldb
-pip3 isntall flask 
+pip3 install flask 
 
 --crear base de datos--
 
@@ -8,3 +10,5 @@ https://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-wor
 --ejecutar--
 
 python3 app.py
+--o
+python app.py
